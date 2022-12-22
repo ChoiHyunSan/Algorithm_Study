@@ -1,0 +1,10 @@
+﻿  Grid.cpp
+C:\Users\CHS\source\repos\Algorithm\Grid\Grid.cpp(32,23): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\CHS\source\repos\Algorithm\Grid\Grid.cpp(35,29): warning C4018: '<=': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\CHS\source\repos\Algorithm\Grid\Grid.cpp(53,23): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\CHS\source\repos\Algorithm\Grid\Grid.cpp(60,23): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\CHS\source\repos\Algorithm\Grid\Grid.cpp(84,23): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\CHS\source\repos\Algorithm\Grid\Grid.cpp(129,22): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\CHS\source\repos\Algorithm\Grid\Grid.cpp(131,27): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\CHS\source\repos\Algorithm\Grid\Grid.cpp(122): warning C4715: 'solution_4': 모든 제어 경로에서 값을 반환하지는 않습니다.
+  Grid.vcxproj -> C:\Users\CHS\source\repos\Algorithm\Debug\Grid.exe
