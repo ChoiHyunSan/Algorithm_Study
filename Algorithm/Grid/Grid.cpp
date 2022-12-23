@@ -15,7 +15,7 @@ int solution_6(vector<int> food_times, long long k);
 int main()
 {
     std::cout << "Hello World!\n";
-    cout << solution_1(5, { 2,2,2,2,4 }) << endl;
+    cout << solution_1(5, { 2,3,1,2,2 }) << endl;
     cout << solution_2("02984") << endl;
     cout << solution_3("0001110011010110") << endl;
     cout << solution_4(5, {3,2,1,1,9}) << endl;
@@ -26,23 +26,24 @@ int main()
 int solution_1(int N, vector<int> list)
 {
     int result = 0;
-
+    int count = 1;
     sort(list.begin(), list.end());
 
-    for (int i = 0; i < list.size();)
+    for (int i = 1; i < list.size(); i++)
     {
-        // 남은 사람중 맨 뒤의 숫자가 남은 사람의 수보다 작거나 같다면 해당 수 만큼을 같은 그룹으로 묶는다.
-        if (list[N - 1 - i] <= list.size() - i)
+        // 현재 그룹의 가장 공포도가 높은 숫자가 구성원의 숫자보다 크다면 구성원을 더 받아야 한다.
+        if (list[i-1] > count)
         {
-            i += list[N - 1 - i];
-            result++;
+            count++;
         }
-        // 남은 사람의 수가 맨 뒤의 숫자보다 작다면 가장 최근에 묶은 그룹으로 해당 사람을 묶는다.
+        // 현재 그룹의 가장 공포도가 높은 숫자가 구성원의 숫자와 같거나 작다면 그룹을 끊어낸다.
         else
         {
-            i++;
+            result++;
+            count = 0;
         }
     }
+
     return result;
 }
 
@@ -59,9 +60,13 @@ int solution_2(string str)
 
     for (int i = 1; i < list.size(); i++)
     {
-        int plus = result + list[i];
-        int Mulitple = result * list[i];
-        result = (plus > Mulitple) ? plus : Mulitple;
+        int temp = list[i]; 
+
+        // 계산하는 두 자연수 중에 0 혹은 1이 존재하는 경우 더하기 연산을 한다.
+        if (temp == 0 || temp == 1 || list[i-1] == 0 || list[i-1] == 1)
+            result += temp;
+        else
+            result *= temp;
     }
 
     return result;
@@ -138,38 +143,14 @@ int solution_5(int N, int M, vector<int> list)
     return result/2;
 }
 
+
+
+
 int solution_6(vector<int> food_times, long long k) {
 
     int result = 0;
 
-    int sum = 0;
-    for (const auto& time : food_times)
-    {
-        sum += time;
-    }
-    if (sum <= k) return -1;
-
-    while (k > 0)
-    {
-        int sum = 0;
-        for (const auto& time : food_times)
-        {
-            sum += time;
-        }
-        if (sum <= 0) return -1;
-
-        if (food_times[result] > 0)
-        {
-            k--;
-            food_times[result]-= 1;
-        }
-
-        result++;
-        if (result >= food_times.size())
-        {
-            result = 0;
-        }
-    }
+    
 
     return result + 1;
 }
