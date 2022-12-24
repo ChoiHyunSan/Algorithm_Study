@@ -144,13 +144,123 @@ int solution_5(int N, int M, vector<int> list)
 }
 
 
+struct Info
+{
+    long long time;
+    int index;
 
+    Info(long long t, int i) : time(t), index(i) {}
+};
+
+
+bool sortByTime(Info L, Info R)
+{
+    return L.time > R.time;
+}
+
+bool sortByIndex(Info L, Info R)
+{
+    return L.index < R.index;
+}
 
 int solution_6(vector<int> food_times, long long k) {
+    int Index = 1;
+    vector<Info> Infos;
 
-    int result = 0;
+    // (먹는 시간 / 그릇 번호)로 새로운 벡터를 생성
+    for (const auto& time : food_times)
+    {
+        Infos.push_back(Info(time, Index));
+        Index++;
+    }
 
-    
+    // 먹는 시간이 가장 느린 순으로 정렬
+    sort(Infos.begin(), Infos.end(), sortByTime);
 
-    return result + 1;
+
+    // 가장 낮은 시간을 가진 음식부터 계산을 한다.
+    // 가장 낮은 음식의 시간 * 남은 음식들의 수가 K보다 작다면 K에서 빼준다.
+
+    long long lastTime  = 0;
+    while (true)
+    {
+        if ((Infos[Infos.size() - 1].time - lastTime) * (Infos.size()) < k)
+        {
+            k -= (Infos[Infos.size() - 1].time - lastTime) * (Infos.size());
+            lastTime = Infos[Infos.size() - 1].time;
+            Infos.pop_back();
+        }
+        else
+        {
+            break;
+        }
+
+    }
+
+    // 
+    sort(Infos.begin(), Infos.end(), sortByIndex);
+
+    int result = Infos[k % Infos.size()].index;
+    return result;
 }
+
+//#include <string>
+//#include <vector>
+//#include <algorithm>
+//#include <iostream>
+//#include <queue>
+//
+//using namespace std;
+//
+//struct info
+//{
+//    long long value;
+//    int index;
+//};
+//
+//bool cmp(info a, info b) {
+//    if (a.value > b.value)return true;
+//    return false;
+//}
+//bool cmp2(info a, info b) {
+//    if (a.index < b.index)return true;
+//    return false;
+//}
+//
+//int solution(vector<int> food_times, long long k) {
+//    int answer = 0;
+//    long long sum = 0;
+//    vector<info> vecInfo;
+//
+//    for (int i = 0; i < food_times.size(); i++)
+//    {
+//        vecInfo.push_back({ food_times[i], i + 1 });
+//        sum += food_times[i];
+//    }
+//
+//    if (sum <= k) return -1;
+//
+//    sort(vecInfo.begin(), vecInfo.end(), cmp);
+//
+//    long long preValue = 0;
+//    while (true) {
+//        int Size = vecInfo.size();
+//        int lastIndex = Size - 1;
+//
+//        if ((vecInfo[lastIndex].value - preValue) * Size < k) 
+//         {
+//            k -= ((vecInfo[lastIndex].value - preValue) * Size);
+//            preValue = vecInfo[lastIndex].value;
+//            vecInfo.pop_back();
+//        }
+//        else {
+//            break;
+//        }
+//
+//    }
+//    sort(vecInfo.begin(), vecInfo.end(), cmp2);
+//    answer = vecInfo[k % vecInfo.size()].index;
+//
+//
+//    return answer;
+//}
