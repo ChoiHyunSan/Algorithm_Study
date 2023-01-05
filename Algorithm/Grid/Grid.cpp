@@ -14,13 +14,23 @@ int solution_6(vector<int> food_times, long long k);
 
 int main()
 {
-    std::cout << "Hello World!\n";
-    cout << solution_1(5, { 2,3,1,2,2 }) << endl;
-    cout << solution_2("02984") << endl;
-    cout << solution_3("0001110011010110") << endl;
-    cout << solution_4(5, {3,2,1,1,9}) << endl;
-    cout << solution_5(8, 5, {1,5,4,3,2,4,5,2}) << endl;
-    cout << solution_6({3,1,2},5) << endl;
+    //std::cout << "Hello World!\n";
+    //cout << solution_1(5, { 2,3,1,2,2 }) << endl;
+    //cout << solution_2("02984") << endl;
+    //cout << solution_3("0001110011010110") << endl;
+    //cout << solution_4(5, {3,2,1,1,9}) << endl;
+    //cout << solution_5(8, 5, {1,5,4,3,2,4,5,2}) << endl;
+    //cout << solution_6({3,1,2},5) << endl;
+
+    int a = 1;
+    int b = 1;
+
+    // 
+    printf("a++ : %d %d %d %d %d \n", a++, a++, a++, a++, a++);
+    printf("++b : %d %d %d %d %d \n", ++b, ++b, ++b, ++b, ++b);
+
+    return 0;
+
 }
 
 int solution_1(int N, vector<int> list)
@@ -43,7 +53,6 @@ int solution_1(int N, vector<int> list)
             count = 0;
         }
     }
-
     return result;
 }
 
@@ -77,7 +86,6 @@ int solution_3(string str)
 {
 
     //  0->1로 변환하는 숫자와 1->0 으로변환되는 값을 비교하여 최선의 방법을 택한다.
-
     int s_0 = 0;
     int s_1 = 0;
 
@@ -85,6 +93,9 @@ int solution_3(string str)
 
     if (str[0] == '1') s_1 += 1;
     else s_0 += 1;
+
+    // 0 <= S <= 999999
+    // 1 \0  i = 0, [i]  [i+1]
 
     for (int i = 1; i < str.length(); i++)
     {
@@ -140,9 +151,9 @@ int solution_5(int N, int M, vector<int> list)
             result++;
         }
     }
+
     return result/2;
 }
-
 
 struct Info
 {
@@ -151,7 +162,6 @@ struct Info
 
     Info(long long t, int i) : time(t), index(i) {}
 };
-
 
 bool sortByTime(Info L, Info R)
 {
@@ -166,21 +176,16 @@ bool sortByIndex(Info L, Info R)
 int solution_6(vector<int> food_times, long long k) {
     int Index = 1;
     vector<Info> Infos;
-
     // (먹는 시간 / 그릇 번호)로 새로운 벡터를 생성
     for (const auto& time : food_times)
     {
         Infos.push_back(Info(time, Index));
         Index++;
     }
-
     // 먹는 시간이 가장 느린 순으로 정렬
     sort(Infos.begin(), Infos.end(), sortByTime);
-
-
     // 가장 낮은 시간을 가진 음식부터 계산을 한다.
     // 가장 낮은 음식의 시간 * 남은 음식들의 수가 K보다 작다면 K에서 빼준다.
-
     long long lastTime  = 0;
     while (true)
     {
@@ -194,10 +199,7 @@ int solution_6(vector<int> food_times, long long k) {
         {
             break;
         }
-
     }
-
-    // 
     sort(Infos.begin(), Infos.end(), sortByIndex);
 
     int result = Infos[k % Infos.size()].index;

@@ -1,9 +1,9 @@
 ﻿  Grid.cpp
-C:\Users\CHS\Documents\GitHub\Algorithm_Study\Algorithm\Grid\Grid.cpp(32,23): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-C:\Users\CHS\Documents\GitHub\Algorithm_Study\Algorithm\Grid\Grid.cpp(54,23): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-C:\Users\CHS\Documents\GitHub\Algorithm_Study\Algorithm\Grid\Grid.cpp(61,23): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-C:\Users\CHS\Documents\GitHub\Algorithm_Study\Algorithm\Grid\Grid.cpp(89,23): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-C:\Users\CHS\Documents\GitHub\Algorithm_Study\Algorithm\Grid\Grid.cpp(134,22): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-C:\Users\CHS\Documents\GitHub\Algorithm_Study\Algorithm\Grid\Grid.cpp(136,27): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-C:\Users\CHS\Documents\GitHub\Algorithm_Study\Algorithm\Grid\Grid.cpp(127): warning C4715: 'solution_4': 모든 제어 경로에서 값을 반환하지는 않습니다.
+C:\Users\CHS\Documents\GitHub\Algorithm_Study\Algorithm\Grid\Grid.cpp(42,23): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\CHS\Documents\GitHub\Algorithm_Study\Algorithm\Grid\Grid.cpp(63,23): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\CHS\Documents\GitHub\Algorithm_Study\Algorithm\Grid\Grid.cpp(70,23): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\CHS\Documents\GitHub\Algorithm_Study\Algorithm\Grid\Grid.cpp(100,23): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\CHS\Documents\GitHub\Algorithm_Study\Algorithm\Grid\Grid.cpp(145,22): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\CHS\Documents\GitHub\Algorithm_Study\Algorithm\Grid\Grid.cpp(147,27): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\CHS\Documents\GitHub\Algorithm_Study\Algorithm\Grid\Grid.cpp(138): warning C4715: 'solution_4': 모든 제어 경로에서 값을 반환하지는 않습니다.
   Grid.vcxproj -> C:\Users\CHS\Documents\GitHub\Algorithm_Study\Algorithm\Debug\Grid.exe

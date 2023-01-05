@@ -62,7 +62,6 @@ int solution_1(int N, int M, int K, vector<int> list)
 			count--;
 		}
 	}
-
 	return result;
 }
 

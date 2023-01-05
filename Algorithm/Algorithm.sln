@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Algorithm", "Algorithm\Algo
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Grid", "Grid\Grid.vcxproj", "{CEA5CA37-75E1-470C-9BE8-F0B55BB49853}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Implement", "Implement\Implement.vcxproj", "{BFDBD0AD-5732-4FC2-BF99-0A5FD8EC2589}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +33,14 @@ Global
 		{CEA5CA37-75E1-470C-9BE8-F0B55BB49853}.Release|x64.Build.0 = Release|x64
 		{CEA5CA37-75E1-470C-9BE8-F0B55BB49853}.Release|x86.ActiveCfg = Release|Win32
 		{CEA5CA37-75E1-470C-9BE8-F0B55BB49853}.Release|x86.Build.0 = Release|Win32
+		{BFDBD0AD-5732-4FC2-BF99-0A5FD8EC2589}.Debug|x64.ActiveCfg = Debug|x64
+		{BFDBD0AD-5732-4FC2-BF99-0A5FD8EC2589}.Debug|x64.Build.0 = Debug|x64
+		{BFDBD0AD-5732-4FC2-BF99-0A5FD8EC2589}.Debug|x86.ActiveCfg = Debug|Win32
+		{BFDBD0AD-5732-4FC2-BF99-0A5FD8EC2589}.Debug|x86.Build.0 = Debug|Win32
+		{BFDBD0AD-5732-4FC2-BF99-0A5FD8EC2589}.Release|x64.ActiveCfg = Release|x64
+		{BFDBD0AD-5732-4FC2-BF99-0A5FD8EC2589}.Release|x64.Build.0 = Release|x64
+		{BFDBD0AD-5732-4FC2-BF99-0A5FD8EC2589}.Release|x86.ActiveCfg = Release|Win32
+		{BFDBD0AD-5732-4FC2-BF99-0A5FD8EC2589}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
